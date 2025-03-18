@@ -1,63 +1,255 @@
+<!DOCTYPE html>
+<html>
 
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<title>MagicID</title>
-<link rel="stylesheet" href="./MagicID_files/css/bulma.min.css">
-<link rel="stylesheet" href="./MagicID_files/css/bulma-carousel.min.css">
-<link rel="stylesheet" href="./MagicID_files/css/index.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="./MagicID_files/js/bulma-carousel.min.js"></script>
-<script src="./MagicID_files/js/index.js"></script>
-<link href="./MagicID_files/css/style.css" rel="stylesheet">
+
+
+
+<head>
+
+  <!-- <link href="css/two_style.css" rel="stylesheet" /> -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="MagicID">
+  <meta property="og:title" content="MagicID" />
+  <meta property="og:description"
+    content="MagicID: High ID-Fidelity Video Customization without Dynamic and Semantic Degradation" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/video_t1.png" />
+  <meta property="og:image:width" content="2412" />
+  <meta property="og:image:height" content="1394" />
+
+
+
+  <title>MagicID</title>
+  <link rel="icon" href="static/images/MagicID-logo.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </head>
 
-<body data-new-gr-c-s-check-loaded="14.1117.0" data-gr-ext-installed="">
-<div class="content">
-  <h1><strong>MagicID: High ID-Fidelity Video Customization <br> without Dynamic and Semantic Degradation</strong></h1>
-  <p id="authors"><a href="https://echopluto.github.io/HomePage/"><b>Hengjia Li<sup>1</sup></b></a> <a href="https://scholar.google.com/citations?user=DzQAV2gAAAAJ&hl=zh-CN"><b>Yang Liu<sup>2</sup></b></a> <a href="https://openreview.net/profile?id=~Yibo_Zhao4"><b>Yibo Zhao<sup>1</sup></b></a><a href="https://scholar.google.com/citations?user=4s389vQAAAAJ&hl=zh-CN"><b>Haoran Cheng<sup>1</sup></b></a><a href="https://github.com/Young98CN"><b>Yang Yang<sup>1</sup></b></a><a href="https://github.com/Xialinxuan"><b>Linxuan Xia<sup>1</sup></b></a></p>
-  <p id="authors"><a href="https://github.com/viakai"><b>Zekai Luo<sup>1</sup></b></a> <a href="https://scholar.google.com/citations?user=wrP3avMAAAAJ&hl=zh-CN"><b>Qiuqi Bo<sup>1</sup></b></a> <a href="https://scholar.google.com/citations?user=AqDe35sAAAAJ&hl=zh-CN"><b>Boxi Wu<sup>1</sup></b></a><a href="https://dblp.org/pid/229/4199.html"><b>Tu Zheng<sup>3</sup></b></a><a href="https://scholar.google.com/citations?user=y8b7ARgAAAAJ&hl=zh-CN"><b>Zheng Yang<sup>3</sup></b></a><a href="http://www.cad.zju.edu.cn/home/dengcai/"><b>Deng Cai<sup>1</sup></b></a><br>
-  <br>
-  <span style="font-size: 16px"><b><sup>1</sup> Zhejiang University </b> &nbsp;&nbsp;<b><sup>2</sup> Alibaba Group</b> &nbsp;&nbsp;<b><sup>3</sup> Fabu Inc.</b>
-  </span>
-  <font size="+2">
-    <p style="text-align: center;">
-      <a href="https://arxiv.org/abs/2411.17048" target="_blank"><b>[arXiv]</b></a> &nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="https://huggingface.co/papers/2411.17048" target="_blank"><b>[HuggingFace]</b></a> &nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="https://github.com/EchoPluto/MagicID" target="_blank"><b>[Code]</b></a>
-    </p>
-  </font>
-  <br>
-</div>
+<body>
+
+  <section class="hero banner" style="display: flex; align-items: center; justify-content: center; text-align: center;">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <i class="pixart-alpha-icon"></i>
+                    <h1 class="title is-1 publication-title" style="display: flex; align-items: center; justify-content: center; text-align: center;">
+                        <span>
+                            <span style="color: #B771E5; font-weight: bold; font-size: 40px;">MagicID:</span>
+                            <span style="color: white; font-weight: bold; font-size: 40px;">MagicID: Hybrid Preference Optimization </span><br>
+                            <span style="color: white; font-weight: bold; font-size: 40px;">for ID-Consistent and Dynamic-Preserved Video Customization</span>
+                            <!-- <span style="color: white; font-weight: bold; font-size: 52px;">with Precise Motion Control</span> -->
+                        </span>
+                    </h1>
+                    <div class="is-size-5 publication-authors" style="text-align: center;">
+                        <span class="author-block">
+                            <a href="https://echopluto.github.io/HomePage/" target="_blank" style="color: rgb(170,170,170) !important; text-decoration: underline;">Hengjia Li</a><sup>1*</sup>,&thinsp;
+                        </span>
+                        <span class="author-block">
+                          <a href="https://scholar.google.com.hk/citations?user=CHuMUyEAAAAJ&hl=zh-CN" target="_blank" style="color: rgb(170,170,170) !important; text-decoration: underline;">Lifan Jiang</a><sup>1*</sup>,&thinsp;
+                        </span>
+                        <span class="author-block">
+                            <a href="https://scholar.google.com/citations?user=Q4DnRVgAAAAJ&hl=zh-CN" target="_blank" style="color: rgb(170,170,170) !important; text-decoration: underline;">Xi Xiao</a><sup>2</sup>,&thinsp;
+                        </span>
+                        <span class="author-block">
+                          <a href="https://wangt0716.github.io/index.html" target="_blank" style="color: rgb(170,170,170) !important; text-decoration: underline;">Tianyang Wang</a><sup>2</sup>, &thinsp;
+                        </span>
+                        <br>
+                        <span class="author-block">
+                            <a href="https://xyyhw.top/" target="_blank" style="color: rgb(170,170,170) !important; text-decoration: underline;">Hongwei Yi</a><sup>3</sup>&thinsp;
+                        </span>
+                        <span class="author-block">
+                          <a href="https://scholar.google.com/citations?user=AqDe35sAAAAJ&hl=zh-CN" target="_blank" style="color: rgb(170,170,170) !important; text-decoration: underline;">Boxi Wu</a><sup>1</sup>&thinsp;
+                        </span>
+                        <span class="author-block">
+                            <a href="http://www.cad.zju.edu.cn/home/dengcai/" target="_blank" style="color: rgb(170,170,170) !important; text-decoration: underline;">Deng Cai</a><sup>1</sup>&thinsp;
+                        </span>
+                    </div>
+                    <div class="is-size-5 publication-authors" style="text-align: center;">
+                        <span class="author-block"><sup>1</sup>Zhejiang University&thinsp; &thinsp;</span>
+                        <span class="author-block"><sup>2</sup>University of Alabama at Birmingham&thinsp; &thinsp;</span>
+                        <span class="author-block"><sup>3</sup>Hedra AI&thinsp; &thinsp;</span>
+                    </div>
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
+                            <span class="link-block">
+                                <a href="https://arxiv.org/abs/2503.12689" target="_blank" class="external-link button is-normal is-rounded is-white">
+                                    <span class="icon">
+                                        <i class="fas fa-file-pdf"></i>
+                                    </span>
+                                    <span>Paper</span>
+                                </a>
+                            </span>
+                            <span class="link-block">
+                                <a href="#" target="_blank" class="external-link button is-normal is-rounded is-white">
+                                    <span class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </span>
+                                    <span>Code</span>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
 
 
 
-  <div class="content">
-    <h2 style="text-align:center;"><b>Abstract</b></h2>
-    <p>Video identity customization seeks to produce high-fidelity videos that maintain consistent identity and exhibit significant dynamics based on users' reference images.
-      However, existing approaches face two key challenges: identity degradation over extended video length and reduced dynamics during training, primarily due to their reliance on traditional self-reconstruction training with static images.      To address these issues, we propose GCA-3D, a generalized and consistent 3D domain adaptation method without the intricate pipeline of data generation.
-      To address these issues, we introduce $\textbf{MagicID}$, a novel framework designed to directly promote the generation of identity-consistent and dynamically rich videos tailored to user preferences.       This multi-modal loss enables GCA-3D in both text prompt and one-shot image prompt adaptation.
-      Specifically, we propose constructing pairwise preference video data with explicit identity and dynamic rewards for preference learning, instead of sticking to the traditional self-reconstruction.       To enhance the pose and identity consistency, we further propose a hierarchical spatial consistency loss to align the spatial structure between the generated images in the source and target domain. 
-      By utilizing these hybrid preference pairs, we optimize the model to align with the reward differences between pairs of customized preferences. Extensive experiments show that MagicID successfully achieves consistent identity and natural dynamics, surpassing existing methods across various metrics. 
-       </div>
-  
-  <script type="text/javascript" src="chrome-extension://emikbbbebcdfohonlaifafnoanocnebl/js/minerkill.js"></script></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
-    div.grammarly-desktop-integration {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-      -moz-user-select: none;
-      -webkit-user-select: none;
-      -ms-user-select:none;
-      user-select:none;
-    }
-  
-    div.grammarly-desktop-integration:before {
-      content: attr(data-content);
-    }
-  </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <!-- <div class="hero-body"> -->
+        <!-- <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
+        <!-- Your video here -->
+        <!-- <source src="static/images/teaser.png"
+        type="video/mp4">
+      </video> -->
+      <br>
+        <img src="./static/images/teaser.png"
+          alt="MY ALT TEXT" />
+        </h2>
+      </div>
+      <!-- </div> -->
+    </div>
+  </section>
+  <!-- End teaser video -->
+
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <!-- <div class="hero-body"> -->
+        <video poster="" id="tree" controls muted loop height="100%">
+          <source src="./static/images/demo.mp4"
+            type="video/mp4">
+        </video>
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser video -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop is-centered has-text-centered">
+        <!-- <div class="columns is-centered has-text-centered"> -->
+        <!-- <div class="column is-four-fifths"> -->
+        <h2 class="title is-3">Abstract</h2>
+        <!-- <h2 class="title is-3">Abstract</h2> -->
+        <div class="content has-text-justified">
+          <p>
+            Video identity customization seeks to produce high-fidelity videos that maintain consistent identity and exhibit significant dynamics based on users' reference images. However, existing approaches face two key challenges: identity degradation over extended video length and reduced dynamics during training, primarily due to their reliance on traditional self-reconstruction training with static images. To address these issues, we introduce MagicID, a novel framework designed to directly promote the generation of identity-consistent and dynamically rich videos tailored to user preferences. Specifically, we propose constructing pairwise preference video data with explicit identity and dynamic rewards for preference learning, instead of sticking to the traditional self-reconstruction. To address the constraints of customized preference data, we introduce a hybrid sampling strategy. This approach first prioritizes identity preservation by leveraging static videos derived from reference images, then enhances dynamic motion quality in the generated videos using a Frontier-based sampling method. By utilizing these hybrid preference pairs, we optimize the model to align with the reward differences between pairs of customized preferences. Extensive experiments show that MagicID successfully achieves consistent identity and natural dynamics, surpassing existing methods across various metrics.          </p>
+        </div>
+        <!-- </div> -->
+        <!-- </div> -->
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+
+
+  <!-- Image carousel -->
+  <section class="hero is-small">
+    <!-- <section class="hero is-light"> -->
+    <div class="hero-body">
+      <div class="container is-max-desktop is-centered has-text-centered">
+        <h2 class="title is-3">Overall Framework of MagicID</h2>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="./static/images/method.png"
+            alt="MY ALT TEXT" />
+          <h2 class="content has-text-justified">
+            In Step 1, we construct a preference video repository using videos generated by fine-tuned and Initial T2V models, along with static videos derived from reference images. In Step 2, we evaluate each video sequentially based on ID consistency using ID Encoder, dynamic degree using optical flow, and prompt following using VLM. In Step 3, we perform Hybrid Pair Selection, first selecting pairs based on ID consistency differences with a pre-defined dynamic threshold to address identity inconsistency, then selecting pairs based on both dynamic and identity to mitigate the dynamic reduction.          </h2>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+  <!-- End image carousel -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8 text-center">
+          <div class="content text-center">
+
+            <p>
+              <!-- <font color='red'>
+                The images used in the demo videos are for academic purposes only and are not for commercial use. If you
+                feel that the images we use infringe your rights, please contact us and we will delete them immediately
+                and express our sincere apologies. Contact email: .</font> -->
+              The source code of this webpage is borrowed from the <a href="https://nerfies.github.io"
+                target="_blank">Nerfies</a>  project webpage.
+            </p>
+            <p class="has-text-centered">Total clicks: <span id="busuanzi_value_site_pv"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    bulmaCarousel.attach('#results-carousel21', {
+      slidesToScroll: 1,
+      slidesToShow: 2,
+      infinite: true,
+      autoplay: true,
+      pauseOnHover: true,
+      autoplaySpeed: 6000,
+    });
+    bulmaCarousel.attach('#results-carousel11', {
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      infinite: true,
+      autoplay: true,
+      pagination: true,
+      pauseOnHover: true,
+      autoplaySpeed: 6000,
+    });
+    bulmaCarousel.attach('#results-carousel33', {
+      slidesToScroll: 1,
+      slidesToShow: 2,
+      infinite: true,
+      autoplay: false,
+      autoplaySpeed: 6000,
+    });
+  </script>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
